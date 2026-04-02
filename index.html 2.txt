@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oakline Construction Co, LLC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- HERO -->
+  <section class="bg-[#0B1F3A] text-white py-20 px-6 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Oakline Construction Co, LLC</h1>
+    <p class="text-lg max-w-2xl mx-auto mb-6">
+      High-quality home repairs and renovations. Done right. Done personally.
+    </p>
+    <a href="#contact" class="bg-[#F97316] hover:bg-[#ea580c] text-white px-6 py-3 rounded-2xl shadow inline-block">
+      Get a Quote
+    </a>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-10 text-center text-[#0B1F3A]">Services</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-white p-6 rounded-2xl shadow border-t-4 border-[#F97316]">
+          <h3 class="font-semibold text-xl mb-2">Punch Lists & Repairs</h3>
+          <p>
+            We prioritize punch list work for local realtors and homeowners. We understand the importance of getting small repairs completed quickly before closing. Speed, reliability, and quality are emphasized on every punch list.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow border-t-4 border-[#F97316]">
+          <h3 class="font-semibold text-xl mb-2">Renovations & Projects</h3>
+          <p>
+            Updating a bathroom or building a new deck? Need a fence? We provide quality work for your small-scale home improvements. With experience in custom tile work, decks, and more, you can rest easy knowing you’ll get the high-quality craftsmanship you deserve.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow border-t-4 border-[#F97316]">
+          <h3 class="font-semibold text-xl mb-2">General Repairs</h3>
+          <p>
+            From patching drywall to adjusting doors—even changing those hard-to-reach light bulbs—we handle a wide variety of home repairs that keep your home running smoothly. With years of experience across a diverse range of repairs, we take pride in getting the job done right.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="bg-gray-100 py-16 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6 text-[#0B1F3A]">About Us</h2>
+      <p class="mb-4">
+        When you hire Oakline Construction, you work directly with the owner, Justin Biddix — not just a third-party contractor. That means clear communication, accountability, and hands-on craftsmanship on every project.
+      </p>
+      <p class="mb-4">
+        Founded in 2019, Oakline began as a landscape business and has grown into a trusted provider of home repairs, renovations, and improvements.
+      </p>
+      <p>
+        As a U.S. military veteran, Justin brings discipline, integrity, and attention to detail into every job.
+      </p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="py-16 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-10 text-center text-[#0B1F3A]">Project Gallery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="shower-renovation.jpg" onclick="openModal(this.src)" class="h-56 w-full object-cover rounded-2xl cursor-pointer" />
+      <img src="new-deck-build.jpg" onclick="openModal(this.src)" class="h-56 w-full object-cover rounded-2xl cursor-pointer" />
+      <img src="dry-riverbed-landscape.jpg" onclick="openModal(this.src)" class="h-56 w-full object-cover rounded-2xl cursor-pointer" />
+      <img src="deck-underpinning.jpg" onclick="openModal(this.src)" class="h-56 w-full object-cover rounded-2xl cursor-pointer" />
+      <img src="custom-tub-surround.jpg" onclick="openModal(this.src)" class="h-56 w-full object-cover rounded-2xl cursor-pointer" />
+      <img src="concrete-driveway.jpg" onclick="openModal(this.src)" class="h-56 w-full object-cover rounded-2xl cursor-pointer" />
+    </div>
+  </section>
+
+  <!-- IMAGE MODAL -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50" onclick="closeModal()">
+    <img id="modalImg" class="max-h-[90%] max-w-[90%] rounded-xl shadow-lg" />
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-16 px-6 text-center bg-[#0B1F3A] text-white">
+    <h2 class="text-3xl font-semibold mb-6">Get in Touch</h2>
+    <p class="mb-4">Ready to start your project?</p>
+    <a href="tel:1234567890" class="bg-[#F97316] hover:bg-[#ea580c] text-white px-6 py-3 rounded-2xl shadow inline-block">
+      Call Now
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#08172B] text-white text-center py-6">
+    <p>© <span id="year"></span> Oakline Construction Co.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    function openModal(src) {
+      const modal = document.getElementById('imageModal');
+      const img = document.getElementById('modalImg');
+      img.src = src;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  </script>
+
+</body>
+</html>
